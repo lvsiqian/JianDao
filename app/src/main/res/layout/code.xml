@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<com.example.last_22.widgets.MinMatchParentConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView2"
+        style="@style/Jiandao.Horizontal_Line"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginEnd="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/auth_code_login_edt_phone_number"
+        style="@style/Jiandao.EditInput"
+        android:layout_marginEnd="44dp"
+        android:hint="@string/text_phone_number"
+        android:text="18610306473"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        style="@style/Jiandao.Horizontal_Line"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/auth_code_login_edt_code"
+        style="@style/Jiandao.EditInput"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/text_input_password"
+        android:inputType="textPassword"
+        android:text="123456"
+        android:maxLength="6"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="34dp" />
+
+    <com.example.last_22.widgets.CleanEditButton
+        android:id="@+id/auth_code_login_btn_phone_number_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_clean"
+        app:layout_constraintBottom_toBottomOf="@id/auth_code_login_edt_phone_number"
+        app:layout_constraintEnd_toEndOf="@+id/auth_code_login_edt_phone_number"
+        app:layout_constraintTop_toTopOf="@id/auth_code_login_edt_phone_number" />
+
+
+    <com.example.last_22.widgets.EditTextButton
+        android:id="@+id/auth_code_login_btn_login"
+        style="@style/Jiandao.Button_style1"
+        android:layout_marginTop="50dp"
+        android:text="@string/text_login"
+        app:layout_constraintEnd_toEndOf="@+id/auth_code_login_edt_code"
+        app:layout_constraintStart_toStartOf="@+id/auth_code_login_edt_code"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/auth_code_login_tv_go_password_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/text_password_login"
+        android:textColor="@color/gray_6"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/auth_code_login_btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/auth_code_login_btn_login" />
+
+    <TextView
+        android:id="@+id/auth_code_login_tv_go_regiester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_register_immediately"
+        android:textColor="@color/gray_6"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/auth_code_login_btn_login"
+        app:layout_constraintTop_toTopOf="@+id/auth_code_login_tv_go_password_login" />
+
+    <TextView
+        android:id="@+id/auth_code_login_tv_get_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_get_code"
+
+        app:layout_constraintBottom_toBottomOf="@+id/auth_code_login_edt_code"
+        app:layout_constraintEnd_toEndOf="@+id/auth_code_login_edt_code"
+        app:layout_constraintTop_toTopOf="@+id/auth_code_login_edt_code" />
+
+    <TextView
+        android:id="@+id/auth_code_login_tv_license"
+        android:layout_width="237dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/text_user_license"
+        android:textColor="@color/gray_6"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/auth_code_login_btn_login"
+        app:layout_constraintStart_toStartOf="@+id/auth_code_login_edt_code"
+        app:layout_constraintTop_toBottomOf="@+id/auth_code_login_edt_code"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/anchor"
+        app:layout_constraintStart_toStartOf="@+id/auth_code_login_tv_go_password_login"
+        app:layout_constraintTop_toBottomOf="@+id/auth_code_login_tv_go_password_login"
+        android:layout_width="0dp"
+        android:background="@color/black_2"
+        android:layout_height="0dp"/>
+    <include layout="@layout/activity_auth_common"></include>
+</com.example.last_22.widgets.MinMatchParentConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintTop_toTopOf="parent" >
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+ <include android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_gravity="left"
+     layout="@layout/activity_home_drawer"
+     />
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <com.lvsiqian.mvplib.widgets.BottomNavigation
+
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bottomNavigationTextColor="@color/bottom_navigation_text_color"
+        app:bottomNavigationTextSize="10dp"
+        app:bottomNavigationLeftMargin="27dp"
+        app:bottomNavigationRightMargin="27dp"
+        app:bottomNavigationTopMargin="6dp"
+        app:bottomNavigationBottomMargin="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:bottomNavigationDeliverLine="true"
+        app:bottomNavigationDeliverLineWidth="1dp"
+        app:bottomNavigationDeliverLineColor="@color/gray"
+        />
+
+</LinearLayout>

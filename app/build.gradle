@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "com.example.last_22"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/mvp/java', 'src/main/java','src/test/java']
+            res.srcDirs = ['src/main/res','src/mvp/res','src/test/res']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // Android Studio 4.0
+    android {
+        buildFeatures {
+            viewBinding = true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation project(path: ':mvplib')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation deps.androidX.appcompat
+    implementation deps.androidX.constraintlayout
+    implementation deps.androidX.recyclerview
+    implementation project(path: ':lib_banner')
+    implementation project(path: ':mvplib')
+
+
+
+
+    implementation deps.okhttp3X.okhttp3
+    implementation deps.okhttp3X.logging_interceptor
+
+
+    implementation deps.retrofitX.retrofit2
+    implementation deps.retrofitX.retrofit_converter_gson
+    implementation deps.retrofitX.retrofit2_adapter_rxjava3
+
+
+
+    implementation deps.rxJavaX.rxjava3
+    implementation deps.rxJavaX.rxAndroid3
+    implementation deps.rxJavaX.rxPermissions
+    implementation deps.other.gifView
+
+    implementation deps.retrofitX.retrofit2_rxjava_components4
+
+    implementation 'com.m.k:system-ui:1.0.0-alpha01'
+    implementation deps.androidX.appcompat
+    implementation deps.androidX.constraintlayout
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+}
